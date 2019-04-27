@@ -1,4 +1,4 @@
-module.exports.KINDOFPLAYER_TYPES = [
+module.exports.GOAL_TYPES = [
     'Hardcore',
     'Casual',
     'Profesional',
@@ -21,4 +21,13 @@ module.exports.KINDOFPLAYER_TYPES = [
     'France',
     'Germany',
   ]
+
+  module.exports.GAME_LIST = [
+    'Fortnite',
+    'CSGO',
+    'Clash Royale',
+
+  ]
+
+
 

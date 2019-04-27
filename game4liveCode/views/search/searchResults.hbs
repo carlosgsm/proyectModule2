@@ -1,17 +1,35 @@
 <!-- crear el listado de resultados de búsqueda-->
+ 
 
  <h2>Players list</h2>
 <div>
   {{#each players as |player|}}
-    <div style="border: black solid 2px; padding: 10px; width: 25%; margin: 5px 0;">
-      <a href="/player/{{player._id}}">{{player.name}}</a>
-        <form action="/players/delete/{{player._id}}" method="POST">
-        <button class="btn btn-danger" style="margin: 5px">Delete!</button>
+    <div style="border: black solid 2px; padding: 10px; width: 80%; margin: 5px 0;">
       </form>
-      <div>
-        <a class="btn btn-success" style="margin: 5px" href="/players/{{player._id}}/edit">Edit!</a>
-      </div>
+     
+  <div class="panel panel-default">
+    <div style="background:lightblue" class="panel-heading"><a href="/player/{{player._id}}">{{player.nick}}</a></div>
+    <div class="panel-body">Nick in Game:{{player.nickInGame}} </div>
+    <div class="panel-body">Goal:{{player.goal}} </div>
+    <div class="panel-body">Language Spoken:{{player.language}} </div>
+  </div>
+
+  <div>
+        <a class="btn btn-success" style="margin: 5px" href="/player/{{player._id}}">View profile</a>
+ </div>
+</div>
+
 </div>
   {{/each}}
 </div>
+
+
+
+
+{{!-- a usar como guia --}}
+
+{{!-- 
 <a class="btn btn-secondary" href="/players/new">Add new player</a>
+<a class="btn btn-success" style="margin: 5px" href="/players/{{player._id}}/edit">Edit!</a> --}}
+        {{!-- <button class="btn btn-danger" style="margin: 5px">Delete!</button> --}}
+        {{!-- <form action="/players/delete/{{player._id}}" method="POST"> --}}

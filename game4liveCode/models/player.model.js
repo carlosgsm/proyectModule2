@@ -8,6 +8,7 @@ const GOAL_TYPES = constants.GOAL_TYPES
 const LANGUAGES_LIST = constants.LANGUAGES_LIST
 const SCHEDULES_LIST = constants.SCHEDULES_LIST
 const COUNTRIES_LIST = constants.COUNTRIES_LIST
+const GAME_LIST = constants.GAME_LIST
 
 
 const playerSchema = new mongoose.Schema({
@@ -42,6 +43,8 @@ const playerSchema = new mongoose.Schema({
   game: {
     type: String,
     required: [true, 'Game is required'],
+    enum: GAME_LIST
+
   },
   levelInGame: {
     type: String,

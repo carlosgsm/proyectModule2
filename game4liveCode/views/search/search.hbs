@@ -1,40 +1,77 @@
 <!-- crear el formulario de búsqueda-->
 <h2>Search a player</h2>
+{{!-- players --}}
 
-<form action="/search" method="POST">
- </div>
+<form action="/search" method="GET">
+  </div>
+     <div class="form-group">
+    <label for="inputNick">Nick</label>
+    <input name="nick"type="text" class="form-control" id="inputNick" placeholder="Be original">
+  </div>
     <div class="form-group">
-    <label for="inputname">Name</label>
-    <input type="text" class="form-control" name="name" placeholder="Be original">
- </div>
- </div>
-    <div class="form-group">
-    <label for="inputnickInGame">Nick In Game</label>
-    <input type="text" class="form-control" name="nickInGame" placeholder="Enter your nick in the game">
- </div>
-
- <div class="form-group col-md-4">
-    <label for="inputkindOfPlayer"> Kind of player</label>
-      <select type="text" name="kindOfPlayer" class="form-control">
+    <label for="inputNickName">Nick In Game</label>
+    <input name="nickInGame"type="text" class="form-control" id="inputNickInGame" placeholder="Your nick inside the game">
+  </div>
+   <div class="form-group">
+      <label for="inputCountry">Country</label>
+      <select name="country"id="inputCountry" class="form-control">
+        <option selected>Select your Country</option>
+        <option>Spain</option>
+        <option>France</option>
+        <option>Germany</option>
+      </select>
+    </div>
+      <div class="form-group">
+      <label for="inputGame">Game</label>
+      <select name="game"id="inputGame" class="form-control">
         <option selected>Choose Worm!</option>
-        <option>Hardcore</option>
+        <option>Fortnite</option>
+        <option>Clash Royale</option>
+        <option>CS:GO</option>
+      </select>
+    </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputLevel">Level ingame</label>
+      <input  name="levelInGame"type="text" class="form-control" id="inputLevel" placeholder="85">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputGoal">Goal</label>
+      <select id="inputGoal" class="form-control">
+        <option selected>Choose Worm!</option>
         <option>Profesional</option>
+        <option>Hardcore</option>
         <option>Casual</option>
       </select>
     </div>
-
-  <div>
-    <button class="btn btn-primary" type="submit">Submit</button>
-  </div>
+  <div class="form-group col-md-6">
+      <label for="languages">Language</label>
+      <select id="inputLanguages" class="form-control">
+        <option selected>Choose Worm!</option>
+        <option>ES</option>
+        <option>ENG</option>
+        <option>RU</option>
+      </select>
+    </div>
+<div class="form-group col-md-6">
+  <select class="custom-select" multiple>
+  <option selected>Game Schedule</option>
+  <option value="1">Morning</option>
+  <option value="2">Afternoon</option>
+  <option value="3">Night</option>
+  </select>
+</div>
+<div>
+  <button type="reset" class="btn btn-primary">Reset</button>
+  <button type="submit" class="btn btn-primary">Search</button>
+</div>
 </form>
 
 {{#if error}}
   <div style="border:red solid 2px">{{error.message}}</div>
 {{/if}} 
 
-{{!-- players --}}
-
-<form>
+{{!-- <form action="/search" method="GET">
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="inputEmail4">Email</label>
@@ -59,7 +96,7 @@
         <option selected>Choose Worm!</option>
         <option>Fortnite</option>
         <option>Clash Royale</option>
-        <option>CS:GO</option>
+        <option>CSGO</option>
       </select>
     </div>
   <div class="form-row">
@@ -99,4 +136,4 @@
     </div>
   </div>
   <button type="submit" class="btn btn-primary">Sign in</button>
-</form>
+</form> --}}

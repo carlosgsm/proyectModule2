@@ -7,18 +7,45 @@ const Players =
 [
 
   {
-      "name": "julio iglesias",
-      "nickInGame": "vividor",
-      "password": "213123",
-      "email": "213@hotmail.com",
+    "email": "213@hotmail.com",
+    "password": "213123",
+    "nick": "julio iglesias",
+    "nickInGame": "vividor",
+    "country": "Spain",
+    "game": "CSGO",
+    "levelInGame": "213123",
+    "goal": "Hardcore",
+    "language": "ES",
+    "schedule": "Morning",
   },
   
   {
-    "name": "fary",
-    "nickInGame": "que risas",
-    "password": "213321123",
-    "email": "213213@hotmail.com",
+    "email": "2123@hotmail.com",
+    "password": "2131231",
+    "nick": "fary",
+    "nickInGame": "frania",
+    "country": "Germany",
+    "game": "Fortnite",
+    "levelInGame": "213123",
+    "goal": "Hardcore",
+    "language": "ES",
+    "schedule": "Morning",
   },
+
+  {
+    "email": "21223@hotmail.com",
+    "password": "21313231",
+    "nick": "reshulon",
+    "nickInGame": "reshulon69",
+    "country": "Germany",
+    "game": "Fortnite",
+    "levelInGame": "213123",
+    "goal": "Casual",
+    "language": "ENG",
+    "schedule": "Morning",
+  },
+  
+  
   ]
 
 Player.create(Players)
