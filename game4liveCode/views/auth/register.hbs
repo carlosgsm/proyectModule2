@@ -1,0 +1,80 @@
+<h1>Register Page</h1>
+<form action="/login" method="POST">
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Email address</label>
+    <input name="email" type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+     <div class="form-group">
+    <label for="inputNick">Nick</label>
+    <input name="nick"type="text" class="form-control" id="inputNick" placeholder="Be original">
+  </div>
+    <div class="form-group">
+    <label for="inputNickName">Nick In Game</label>
+    <input name="nickInGame"type="text" class="form-control" id="inputNickInGame" placeholder="Your nick inside the game">
+  </div>
+   <div class="form-group">
+      <label for="inputCountry">Country</label>
+      <select name="country"id="inputCountry" class="form-control">
+        <option selected>Select your Country</option>
+        <option>Spain</option>
+        <option>France</option>
+        <option>Germany</option>
+      </select>
+    </div>
+      <div class="form-group">
+      <label for="inputGame">Game</label>
+      <select name="game"id="inputGame" class="form-control">
+        <option selected>Choose Worm!</option>
+        <option>Fortnite</option>
+        <option>Clash Royale</option>
+        <option>CS:GO</option>
+      </select>
+    </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputLevel">Level ingame</label>
+      <input  name="levelInGame"type="text" class="form-control" id="inputLevel" placeholder="85">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputGoal">Goal</label>
+      <select id="inputGoal" class="form-control">
+        <option selected>Choose Worm!</option>
+        <option>Profesional</option>
+        <option>Hardcore</option>
+        <option>Casual</option>
+      </select>
+    </div>
+  <div class="form-group col-md-4">
+      <label for="languages">Language</label>
+      <select id="inputLanguages" class="form-control">
+        <option selected>Choose Worm!</option>
+        <option>ES</option>
+        <option>ENG</option>
+        <option>RU</option>
+      </select>
+    </div>
+<div class="form-group">
+  <select class="custom-select" multiple>
+  <option selected>Game Schedule</option>
+  <option value="1">Morning</option>
+  <option value="2">Afternoon</option>
+  <option value="3">Night</option>
+</div>
+
+</select>
+  <div class="form-group">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="gridCheck">
+      <label class="form-check-label" for="gridCheck">
+        Check me out
+      </label>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Sign in</button>
+</form>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
