@@ -1,0 +1,38 @@
+<h2>Edit a profile</h2>
+
+<form action="/player/{{player._id}}" method="POST">
+ </div>
+     <div class="form-group">
+    <label for="inputNick">Nick</label>
+    <input name="nick"type="text" class="form-control" id="inputNick" placeholder="Be original" value="{{player.nick}}">
+  </div>
+    <div class="form-group">
+    <label for="inputNickName">Nick In Game</label>
+    <input name="nickInGame"type="text" class="form-control" id="inputNickInGame" placeholder="Your nick inside the game">
+  </div>
+   <div class="form-group">
+      <label for="inputCountry">Country</label>
+      <select name="country"id="inputCountry" class="form-control">
+        <option selected>Select your Country</option>
+        <option>Spain</option>
+        <option>France</option>
+        <option>Germany</option>
+      </select>
+    </div>
+      <div class="form-group">
+      <label for="inputGame">Game</label>
+      <select name="game"id="inputGame" class="form-control">
+        <option selected>Choose Worm!</option>
+        <option>Fortnite</option>
+        <option>Clash Royale</option>
+        <option>CS:GO</option>
+      </select>
+    </div>
+    <div>
+    <button class="btn btn-primary" type="submit">Submit</button>
+  </div>
+</form>
+
+{{#if error}}
+  <div style="border:red solid 2px">{{error.message}}</div>
+{{/if}}
