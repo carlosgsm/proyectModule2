@@ -1,0 +1,102 @@
+<!-- crear el formulario de búsqueda-->
+<h2>Search a player</h2>
+
+<form action="/search" method="POST">
+ </div>
+    <div class="form-group">
+    <label for="inputname">Name</label>
+    <input type="text" class="form-control" name="name" placeholder="Be original">
+ </div>
+ </div>
+    <div class="form-group">
+    <label for="inputnickInGame">Nick In Game</label>
+    <input type="text" class="form-control" name="nickInGame" placeholder="Enter your nick in the game">
+ </div>
+
+ <div class="form-group col-md-4">
+    <label for="inputkindOfPlayer"> Kind of player</label>
+      <select type="text" name="kindOfPlayer" class="form-control">
+        <option selected>Choose Worm!</option>
+        <option>Hardcore</option>
+        <option>Profesional</option>
+        <option>Casual</option>
+      </select>
+    </div>
+
+  <div>
+    <button class="btn btn-primary" type="submit">Submit</button>
+  </div>
+</form>
+
+{{#if error}}
+  <div style="border:red solid 2px">{{error.message}}</div>
+{{/if}} 
+
+{{!-- players --}}
+
+<form>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Email</label>
+      <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputPassword4">Password</label>
+      <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+    </div>
+  </div>
+    <div class="form-group">
+    <label for="inputNickName">NickName</label>
+    <input type="text" class="form-control" id="inputNickName" placeholder="Be original">
+  </div>
+  <div class="form-group">
+    <label for="inputCountry">Country</label>
+    <input type="text" class="form-control" id="inputCountry" placeholder="Spain is different">
+  </div>
+      <div class="form-group">
+      <label for="inputGame">Game</label>
+      <select id="inputGame" class="form-control">
+        <option selected>Choose Worm!</option>
+        <option>Fortnite</option>
+        <option>Clash Royale</option>
+        <option>CS:GO</option>
+      </select>
+    </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputLevel">Level ingame</label>
+      <input type="text" class="form-control" id="inputLevel" placeholder="85">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputGoal">Goal</label>
+      <select id="inputGoal" class="form-control">
+        <option selected>Choose Worm!</option>
+        <option>Profesional</option>
+        <option>Hardcore player</option>
+        <option>Casual</option>
+      </select>
+    </div>
+    <div class="form-group col-md-2">
+      <label for="languajes">languages</label>
+      <input type="text" class="form-control" id="inputLanguages">
+    </div>
+  </div>
+<div class="form-group">
+  <select class="custom-select" multiple>
+  <option selected>Game Schedule</option>
+  <option value="1">Morning</option>
+  <option value="2">Afternoon</option>
+  <option value="3">Night</option>
+</div>
+
+</select>
+  <div class="form-group">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="gridCheck">
+      <label class="form-check-label" for="gridCheck">
+        Check me out
+      </label>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Sign in</button>
+</form>
