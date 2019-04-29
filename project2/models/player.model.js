@@ -24,41 +24,41 @@ const playerSchema = new mongoose.Schema({
   },
   nick: {
     type: String,
-    required: [true, 'nick is required'],
+    //required: [true, 'nick is required'],
     unique: true
   },
   nickInGame: {
     type: String,
-    required: [true, 'nick in game is required'],
+    //required: [true, 'nick in game is required'],
     unique: true
   },
   country: {
     type: String,
-    required: [true, 'country is required'],
+    //required: [true, 'country is required'],
     enum: COUNTRIES_LIST
 
   },
   game: {
     type: String,
-    required: [true, 'Game is required'],
+    //required: [true, 'Game is required'],
   },
   levelInGame: {
     type: String,
-    required: [true, 'level is required'],
+    //required: [true, 'level is required'],
   },
   goal: {
     type: String,
-    required: [true, 'kind of player is required'],
+    //required: [true, 'kind of player is required'],
     enum: GOAL_TYPES
   },
   language: {
     type: String,
-    required: [true, 'language is required'],
+    //required: [true, 'language is required'],
     enum: LANGUAGES_LIST
   },
   schedule: {
     type: String,
-    required: [true, 'schedule is required'],
+    //required: [true, 'schedule is required'],
     enum: SCHEDULES_LIST
   },
   //incluyo valores de google API

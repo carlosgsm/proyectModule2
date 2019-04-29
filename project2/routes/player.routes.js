@@ -7,5 +7,7 @@ const secure = require('../middelwares/secure.mid');
 router.get('/:id', playerController.detail)
 router.get('/', secure.isAuthenticated, playerController.account);
 
+router.get('/:id/edit', playerController.edit)
+router.post('/:id', playerController.doEdit)
 
 module.exports = router;

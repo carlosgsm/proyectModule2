@@ -20,3 +20,22 @@ module.exports.account = (req, res, next) => {
       })
       .catch(error => next(error));
   }
+
+  module.exports.edit = ((req, res, next) => {
+    const id = req.params.id
+    Player.findById(id)
+      .then( player => {
+        res.render('player/edit.hbs', {player})
+      })
+      .catch(error => next(error))
+  })
+  
+  module.exports.doEdit = ((req, res, next) => {
+    const id = req.params.id
+    const update = req.body
+    Player.findByIdAndUpdate(id, req.body)
+      .then( () => {
+        res.redirect('/player')
+      })
+      .catch(error => next(error))
+  })
