@@ -14,16 +14,21 @@
       <li class="nav-item active">
         <a class="nav-link" href="/search">Search<span class="sr-only">(current)</span></a>
       </li>
+      {{#unless session}}
       <li class="nav-item active">
-        <a class="nav-link" href="/register">Register <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="/login">Register/Login<span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item active">
+      {{/unless}}
+      <!--<li class="nav-item active">
         <a class="nav-link" href="/login">Login <span class="sr-only">(current)</span></a>
-      </li>
+      </li>-->
       {{#if session}}
       <li class="nav-item active">
-        <a class="nav-link" href="/player/{{session._id}}/edit">Profile <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="/player">MyProfile <span class="sr-only">(current)</span></a>
       </li>
+      <!--<li class="nav-item active">
+        <a class="nav-link" href="/player/{{session._id}}/edit">MyProfile <span class="sr-only">(current)</span></a>
+      </li>--><!--PRUEBA PROFILE-->
       {{/if}}
       <!--<li class="nav-item">
         <a class="nav-link" href="#">Another style</a>
@@ -47,5 +52,14 @@
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
+    {{#if session}}
+    <div>
+      <ul class="logout">
+        <li class="nav-item active">
+          <a class="nav-link" href="/logout">Click to Logout<span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+    </div>
+    {{/if}}
   </div>
 </nav>

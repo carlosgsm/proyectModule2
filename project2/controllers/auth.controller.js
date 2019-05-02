@@ -21,7 +21,7 @@ module.exports.doRegister = (req, res, next) => {
       } else {
         player = new Player (req.body);
         return player.save()
-          .then(player => res.redirect('/login'))
+          .then( () => res.redirect('/login'))
       }
     })
     .catch(error => {
@@ -38,6 +38,31 @@ module.exports.showLogin = (req, res, next) => {
 }
 
 module.exports.doLogin = (req, res, next) => {
+  passport.authenticate('google-auth', (error, player) => {
+    if(error) {
+      next(error)
+    } else {
+      req.login(player, (error) => {
+        if(error) {
+          next(error)
+        } else {
+          res.redirect('/player')
+        }
+      })
+    }
+  })(req, res, next);
+}
+
+module.exports.showProfile = (req, res,next) => {
+  res.render('player/profile');
+}
+
+module.exports.logout = (req, res, next) => {
+  req.logout();
+  res.redirect('/login');
+}
+
+/*module.exports.doLogin = (req, res, next) => {
   passport.authenticate('local-auth', (error, player, validation) => {
     if(error) {
       next(error);
@@ -56,4 +81,4 @@ module.exports.doLogin = (req, res, next) => {
       })
     }
   })(req, res, next);
-}
+}*/

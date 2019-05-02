@@ -5,7 +5,7 @@ const Player = require('../models/player.model');
 module.exports.list = ((req, res, next) => {
   Player.find({})
     .then( players => {
-      res.render('search/searchResults.hbs', {players})
+      res.render('search/searchResults', {players})
     })
     .catch(error => next(error))
 })
@@ -16,7 +16,7 @@ module.exports.list = ((req, res, next) => {
 module.exports.search = ((req, res, next) => {
     Player.find({})
       .then( players => {
-        res.render('search/search.hbs', {players})
+        res.render('search/search', {players})
       })
       .catch(error => next(error))
   })
