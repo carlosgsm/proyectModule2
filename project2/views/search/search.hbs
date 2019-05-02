@@ -31,7 +31,7 @@
       </select>
     </div>
   <div >
-    <div class="form-group col-md-4">
+    <!--<div class="form-group col-md-4">
       <label for="inputLevel">Level ingame</label>
       <input  name="levelInGame"type="text" class="form-control" id="inputLevel" placeholder="85">
     </div>
@@ -61,7 +61,7 @@
   <option value="2">Afternoon</option>
   <option value="3">Night</option>
   </select>
-</div>
+</div>-->
 <div class="form-group col-md-12">
   <button type="reset" class="btn btn-primary">Reset</button>
   <button type="submit" class="btn btn-primary">Search</button>
@@ -71,4 +71,26 @@
 {{#if error}}
   <div style="border:red solid 2px">{{error.message}}</div>
 {{/if}} 
+<div class="div-player-list">
+ <h2>Players list</h2>
+<div>
+  {{#each players as |player|}}
+    <div style="border: black solid 2px; padding: 10px; width: 80%; margin: 5px 0;">
+      </form>
+     
+  <div class="panel panel-default">
+    <div style="background:lightblue" class="panel-heading"><a href="/player/{{player._id}}">{{player.nick}}</a></div>
+    <div class="panel-body">Nick in Game:{{player.nickInGame}} </div>
+    <div class="panel-body">Country:{{player.country}} </div>
+    <div class="panel-body">Game:{{player.game}} </div>
+  </div>
 
+  <div>
+        <a class="btn btn-success" style="margin: 5px" href="/player/{{player._id}}">View profile</a>
+ </div>
+</div>
+
+</div>
+  {{/each}}
+</div>
+</div>
