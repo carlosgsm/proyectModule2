@@ -40,8 +40,8 @@ app.use((req, res, next) => {
 
 app.use('/', mainRouter);
 app.use('/', authRouter);
-app.use('/', searchRouter);//hay algo que peta por aqui
-app.use('/player', playerRouter);//hay algo que peta por aqui
+app.use('/', searchRouter);
+app.use('/player', playerRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

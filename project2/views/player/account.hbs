@@ -1,6 +1,70 @@
-<h1 class="display-4">My Account</h1>
+<div class="div-player-account">
+<h2>Hi, <span class="hello-player-account">{{player.name}}</span>. Your Profile is almost ready... Show yourself around!</h2>
+<div class="div-form-player-account">
+     <form id="form-player-account" action="/player" method="POST">
+          <div class="form-group">
+               <label for="inputNick">Nick</label>
+               <input name="nick" type="text" class="form-control {{#if errors.nick}} is-invalid {{/if}}" id="inputNick" placeholder="Be original" {{#if account.nick}} value="{{account.nick}}" {{/if}} value="{{player.nick}}">
+                    <div class="invalid-feedback">
+                         {{ errors.nick }}
+                    </div>
+          </div>
+          <div class="form-group">
+               <label for="inputNickName">Nick In Game</label>
+               <input name="nickInGame" type="text" class="form-control {{#if errors.nickInGame}} is-invalid {{/if}}"  id="inputNickInGame" placeholder="Your nick inside the game" {{#if account.nickInGame}} value="{{account.nickInGame}}" {{/if}} value="{{player.nickInGame}}">
+                    <div class="invalid-feedback">
+                         {{ errors.nickInGame }}
+                    </div>
+          </div>
+          <div class="form-group">
+               <label for="inputCountry">Country</label>
+               <select name="country" id="inputCountry" class="form-control {{#if errors.country}} is-invalid {{/if}}">
+                   {{#select CurrentSort}}
+
+               <option selected>Select your Country</option>
+               <option value="Spain">Spain</option>
+               <option value="France">France</option>
+               <option value="Germany">Germany</option>
+                   {{/select}}
+
+               </select>
+                    <div class="invalid-feedback">
+                         {{ errors.country }}
+                    </div>
+          </div>
+          <div class="form-group">
+               <label for="inputGame">Game</label>
+               <select name="game" id="inputGame" class="form-control {{#if errors}} is-invalid {{/if}}">
+               <option selected>Choose Worm!</option>
+               <option>Fortnite</option>
+               <option>Clash Royale</option>
+               <option>CS:GO</option>
+               </select>
+                    <div class="invalid-feedback">
+                         {{ errors.game }}
+                    </div>
+          </div>
+          <div>
+               <button id="button-player-account" class="btn btn-primary" type="submit">Submit</button>
+          </div>
+     </form>
+</div>
+
+</div>
+{{#if error}}
+  <div style="border:red solid 2px">{{error.message}}</div>
+{{/if}}
+
+
+
+
+
+
+
+
+<!--<h1 class="display-4">My Account</h1>
     <span>Hello! Your email account is: {{player.email}}</span>
     <span>Your name: {{player.name}}</span>
      <div class="text-center mb-2">
           <img src="{{ player.avatarURL }}" class="img-fluid rounded" alt="{{ user.name }}">
-    </div>
+    </div>-->

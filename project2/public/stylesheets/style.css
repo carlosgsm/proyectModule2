@@ -6,3 +6,62 @@ body {
 a {
   color: #00B7FF;
 }
+
+.logout {
+  display: flex;
+  flex-direction: row;
+  text-decoration: underline;
+  float: right;
+  list-style: none;
+}
+
+.login-google{
+  width:50%;
+  background-color: #f8f9fa;
+  margin: auto;
+}
+
+.login-google-content {
+  margin: auto;
+}
+
+.login-google-content h1 {
+  text-align: center;
+  padding: 1em;
+}
+
+.login-google-content a {
+  width:50%;
+  margin: auto;
+}
+
+.login-text {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.div-player-account {
+  text-align: center;
+}
+
+.div-form-player-account {
+  width:75%;
+  margin:auto;
+}
+
+#form-player-account {
+  width: 300px;
+  margin: auto;
+  text-align: left;
+  background-color: #f8f9fa;
+  padding: 1em;
+}
+
+#button-player-account {
+  width: 100%;
+}
+
+.hello-player-account {
+  color:blue;
+  text-decoration: aqua;
+}

@@ -1,24 +1,30 @@
 module.exports.KINDOFPLAYER_TYPES = [
     'Hardcore',
     'Casual',
-    'Profesional',
+    'Profesional'
   ]
 
   module.exports.LANGUAGES_LIST = [
     'ES',
     'ENG',
-    'RU',
+    'RU'
   ]
 
   module.exports.SCHEDULES_LIST = [
     'Morning',
     'Afternoon',
-    'Night',
+    'Night'
   ]
 
   module.exports.COUNTRIES_LIST = [
     'Spain',
     'France',
-    'Germany',
+    'Germany'
+  ]
+
+  module.exports.GAME_LIST = [
+    'Fortnite',
+    'Clash Royale',
+    'CS:GO'
   ]
 
