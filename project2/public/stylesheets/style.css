@@ -65,3 +65,7 @@ a {
   color:blue;
   text-decoration: aqua;
 }
+
+.div-player-list {
+  clear: both;
+}
