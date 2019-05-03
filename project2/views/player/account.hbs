@@ -21,7 +21,7 @@
                <select name="country" id="inputCountry" class="form-control {{#if errors.country}} is-invalid {{/if}}">
                    {{#select CurrentSort}}
 
-               <option selected>Select your Country</option>
+               <option selected>{{player.country}}</option>
                <option value="Spain">Spain</option>
                <option value="France">France</option>
                <option value="Germany">Germany</option>
@@ -35,7 +35,7 @@
           <div class="form-group">
                <label for="inputGame">Game</label>
                <select name="game" id="inputGame" class="form-control {{#if errors}} is-invalid {{/if}}">
-               <option selected>Choose Worm!</option>
+               <option selected>{{player.game}}</option>
                <option>Fortnite</option>
                <option>Clash Royale</option>
                <option>CS:GO</option>
@@ -54,6 +54,7 @@
 {{#if error}}
   <div style="border:red solid 2px">{{error.message}}</div>
 {{/if}}
+
 
 
 
