@@ -74,14 +74,21 @@
 <div class="div-player-list">
  <h2>Players list</h2>
 <div>
+{{#unless players}}
+ <h3>No results, try another criteria or go fuck yourself</h3>
+{{/unless}} 
+
   {{#each players as |player|}}
-    <div style="border: black solid 2px; padding: 10px; width: 80%; margin: 5px 0;">
+    <div style="border: black solid 2px; padding: 10px; width: 30%; margin: 5px 0;float:left; margin:10px">
       </form>
      
   <div class="panel panel-default">
     <div style="background:lightblue" class="panel-heading"><a href="/player/{{player._id}}">{{player.nick}}</a></div>
+    {{#if avatarURL}}<div class="panel-body"><img style="width:75px;height:75px" src="{{player.avatarURL}}"> </div>{{/if}} 
+    {{#unless avatarURL}}<div class="panel-body"><img style="width:75px;height:75px" src="https://2static1.fjcdn.com/thumbnails/comments/Just+when+i+thought+quotoh+thats+enough+nasty+_5a0591bbbea7ad8c9e4dfb767e9c1b74.jpg"> </div>{{/unless}} 
+
     <div class="panel-body">Nick in Game:{{player.nickInGame}} </div>
-    <div class="panel-body">Country:{{player.country}} </div>
+    <div class="panel-body">Country:{{player.country}}</div>
     <div class="panel-body">Game:{{player.game}} </div>
   </div>
 
@@ -94,3 +101,4 @@
   {{/each}}
 </div>
 </div>
+
